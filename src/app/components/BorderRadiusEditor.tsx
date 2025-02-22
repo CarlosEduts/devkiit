@@ -57,7 +57,7 @@ export default function BorderRadiusEditor() {
             ))}
           </div>
           <div
-            className="h-40 w-full bg-muted"
+            className="h-40 w-full bg-primary/30"
             style={{
               borderRadius: `${radius.topLeft}px ${radius.topRight}px ${radius.bottomRight}px ${radius.bottomLeft}px`,
             }}

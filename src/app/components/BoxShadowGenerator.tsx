@@ -70,7 +70,7 @@ export default function BoxShadowGenerator() {
             />
           </div>
           <div
-            className="h-40 w-full rounded bg-muted"
+            className="h-40 w-full rounded bg-primary/30"
             style={{
               boxShadow: `${shadow.horizontal}px ${shadow.vertical}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`,
             }}
