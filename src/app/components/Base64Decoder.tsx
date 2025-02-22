@@ -77,6 +77,11 @@ export default function Base64Decoder() {
               value={output}
             />
           </div>
+          {output && (
+            <Button onClick={() => navigator.clipboard.writeText(output)}>
+              Copy Output
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>

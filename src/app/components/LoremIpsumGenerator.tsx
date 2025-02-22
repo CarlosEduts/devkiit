@@ -23,21 +23,22 @@ export default function LoremIpsumGenerator() {
         " "
       );
 
-      console.log(loremIpsum)
+    console.log(loremIpsum);
 
     let result = "";
 
     for (let i = 0; i < paragraphs; i++) {
-
-
       let paragraph = "";
       for (let i = 0; i < words; i++) {
-        paragraph += loremIpsum[Math.round(Math.random() * loremIpsum.length - 1)] + " ";
-        
+        paragraph +=
+          loremIpsum[Math.round(Math.random() * loremIpsum.length - 1)] + " ";
       }
 
-
-      result += paragraph.charAt(0).toUpperCase()+paragraph.slice(1).trim() + "." + "\n\n";
+      result +=
+        paragraph.charAt(0).toUpperCase() +
+        paragraph.slice(1).trim() +
+        "." +
+        "\n\n";
       paragraph = "";
     }
     setGeneratedText(result.trim());
@@ -79,6 +80,13 @@ export default function LoremIpsumGenerator() {
             readOnly
             value={generatedText}
           />
+          {generatedText && (
+            <Button
+              onClick={() => navigator.clipboard.writeText(generatedText)}
+            >
+              Copy Output
+            </Button>
+          )}
           <Button onClick={generateLoremIpsum}>Generate Lorem Ipsum</Button>
         </div>
       </CardContent>

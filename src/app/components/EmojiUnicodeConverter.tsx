@@ -44,6 +44,14 @@ export default function EmojiUnicodeConverter() {
           <div>
             <Label>Unicode Code</Label>
             <Input readOnly value={unicodeCode} />
+            {unicodeCode && (
+              <Button
+                onClick={() => navigator.clipboard.writeText(unicodeCode)}
+                className="w-full mt-3"
+              >
+                Copy Unicode
+              </Button>
+            )}
           </div>
         </div>
       </CardContent>

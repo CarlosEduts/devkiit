@@ -38,6 +38,11 @@ export default function UUIDGenerator() {
       <CardContent>
         <div className="grid gap-4">
           <Input readOnly value={uuid} />
+          {uuid && (
+            <Button onClick={() => navigator.clipboard.writeText(uuid)}>
+              Copy Output
+            </Button>
+          )}
           <Button onClick={generateUUID}>Generate UUID</Button>
         </div>
       </CardContent>

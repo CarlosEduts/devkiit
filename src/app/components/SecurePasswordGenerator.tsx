@@ -90,6 +90,13 @@ export default function SecurePasswordGenerator() {
             <Label htmlFor="include-symbols">Include Symbols</Label>
           </div>
           <Input readOnly value={generatedPassword} />
+          {generatedPassword && (
+            <Button
+              onClick={() => navigator.clipboard.writeText(generatedPassword)}
+            >
+              Copy Password
+            </Button>
+          )}
           <Button onClick={generatePassword}>Generate Password</Button>
         </div>
       </CardContent>

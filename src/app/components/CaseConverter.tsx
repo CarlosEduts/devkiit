@@ -68,14 +68,38 @@ export default function CaseConverter() {
           <div>
             <Label>camelCase</Label>
             <Input readOnly value={camelCase} />
+            { camelCase &&
+            <Button
+              onClick={() => navigator.clipboard.writeText(camelCase)}
+              className="w-full mt-3"
+              variant="outline"
+            >
+              Copy camelCase
+            </Button> }
           </div>
           <div>
             <Label>snake_case</Label>
             <Input readOnly value={snakeCase} />
+            {snakeCase &&
+            <Button
+              onClick={() => navigator.clipboard.writeText(snakeCase)}
+              className="w-full mt-3"
+              variant="outline"
+            >
+              Copy snake_case
+            </Button>}
           </div>
           <div>
             <Label>kebab-case</Label>
             <Input readOnly value={kebabCase} />
+            {kebabCase &&
+            <Button
+              onClick={() => navigator.clipboard.writeText(kebabCase)}
+              className="w-full mt-3"
+              variant="outline"
+            >
+              Copy kebab-case
+            </Button>}
           </div>
         </div>
       </CardContent>
