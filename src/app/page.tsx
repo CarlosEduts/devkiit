@@ -19,6 +19,7 @@ import {
   Settings,
   ShieldCheck,
   Shuffle,
+  Sun,
   Timer,
   Type,
 } from "lucide-react";
@@ -195,7 +196,7 @@ export default function Dashboard() {
                 variant="ghost"
                 className="p-4 h-7 w-7 border border-gray-500/20 bg-gray-400/5 dark:text-white/80"
               >
-                <Moon />
+                {isDark? <Sun /> : <Moon />}
               </Button>
 
               <a href="https://github.com/CarlosEduts/devkiit" target="_blank">
