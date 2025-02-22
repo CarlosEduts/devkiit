@@ -9,7 +9,6 @@ This project offers a collection of tools designed to simplify the daily life of
 - **Next.js**
 - **TypeScript**
 - **TailwindCSS**
-- **next-intl**
 - **Prettier**
 
 ## Contributions
