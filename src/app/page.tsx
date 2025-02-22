@@ -198,7 +198,7 @@ export default function Dashboard() {
                 <Moon />
               </Button>
 
-              <a href="https://github.com/CarlosEduts/dev-kiit" target="_blank">
+              <a href="https://github.com/CarlosEduts/devkiit" target="_blank">
                 <Button
                   variant="ghost"
                   className="p-4 h-7 w-7 border border-gray-500/20 bg-gray-400/5 dark:text-white/80"
